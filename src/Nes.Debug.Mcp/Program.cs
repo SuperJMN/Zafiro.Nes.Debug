@@ -7,7 +7,11 @@ using Nes.Debug.Mcp;
 // Permanently redirect Console.Write* so inherited emulator diagnostics use stderr instead.
 Console.SetOut(Console.Error);
 
-var builder = Host.CreateApplicationBuilder(args);
+var builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
+{
+    Args = args,
+    ContentRootPath = AppContext.BaseDirectory,
+});
 
 builder.Logging.AddConsole(options =>
 {
