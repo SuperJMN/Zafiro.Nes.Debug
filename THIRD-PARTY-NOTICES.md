@@ -1,15 +1,15 @@
 # Third-Party Notices
 
-`Nes.Mcp` includes vendored emulator code and emulator reference work from other projects. Keep this notice with source and binary distributions.
+`Zafiro.Nes.Debug.Mcp` includes vendored emulator code and emulator reference work from other projects. Keep this notice with source and binary distributions.
 
 ## Vendored Emulator Cores
 
 ### AprNes
 
-- Path: `src/Nes.Debug.Emulator/AprNes/NesCore/`
+- Path: `src/Zafiro.Nes.Debug.Emulator/AprNes/NesCore/`
 - Upstream: https://github.com/erspicu/AprNes
 - License: WTFPL
-- License file: `src/Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt`
+- License file: `src/Zafiro.Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt`
 
 The vendored AprNes core has local integration changes for headless MCP use, debug-session control, memory/register inspection, screen capture, watchpoints, tracing, and savestates.
 
@@ -22,7 +22,7 @@ The AprNes source tree carries explicit comments crediting or referencing the pr
 - Upstream: https://github.com/100thCoin/TriCNES
 - Author: Chris "100th_Coin" Siebert
 - License: MIT
-- License file: `src/Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt`
+- License file: `src/Zafiro.Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt`
 - Usage in this tree: AprNes source comments identify TriCNES timing, PPU, APU, controller, DMA, and interrupt behavior as reference or ported behavior in files such as `PPU.cs`, `ppu_new.cs`, `APU.cs`, `MEM.cs`, `CPU.cs`, and `JoyPad.cs`.
 
 ### Mesen2
@@ -30,7 +30,7 @@ The AprNes source tree carries explicit comments crediting or referencing the pr
 - Upstream: https://github.com/SourMesen/Mesen2
 - Author: Sour
 - License: GPL-3.0-or-later
-- License file: `src/Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt`
+- License file: `src/Zafiro.Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt`
 - Usage in this tree: AprNes source comments cite Mesen2 mapper behavior in multiple mapper implementations. Some comments identify direct ports, for example `Mapper176.cs` describes a full port of Mesen2 `Waixing/Fk23C.h`, and `Emu2413.cs` notes that its C# port was made from Mesen2's copy.
 
 Given those explicit source comments, the NuGet package license expression is intentionally conservative and includes `GPL-3.0-or-later` while this vendored AprNes tree remains as-is.
@@ -40,8 +40,8 @@ Given those explicit source comments, the NuGet package license expression is in
 - Upstream: https://github.com/digital-sound-antiques/emu2413
 - Author: Mitsutaka Okazaki
 - License: MIT
-- License file: `src/Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt`
-- Usage in this tree: `src/Nes.Debug.Emulator/AprNes/NesCore/Mapper/Emu2413.cs` provides the YM2413/OPLL synthesis engine used by VRC7 mapper support.
+- License file: `src/Zafiro.Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt`
+- Usage in this tree: `src/Zafiro.Nes.Debug.Emulator/AprNes/NesCore/Mapper/Emu2413.cs` provides the YM2413/OPLL synthesis engine used by VRC7 mapper support.
 
 ### NESdev Wiki
 
