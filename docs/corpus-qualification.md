@@ -1,15 +1,15 @@
 # Private ROM corpus qualification
 
-`Nes.Corpus.Qualification` runs a bounded compatibility workflow over a local directory and writes one aggregate JSON object to standard output. It reads direct `.nes` files and `.nes` entries in ZIP archives without modifying or permanently extracting the source corpus.
+`Zafiro.Nes.Corpus.Qualification` runs a bounded compatibility workflow over a local directory and writes one aggregate JSON object to standard output. It reads direct `.nes` files and `.nes` entries in ZIP archives without modifying or permanently extracting the source corpus.
 
 ## Invocation
 
 Build the MCP server and qualification tool in the same configuration, then run:
 
 ```console
-dotnet tools/Nes.Corpus.Qualification/bin/Release/net10.0/Nes.Corpus.Qualification.dll \
+dotnet tools/Zafiro.Nes.Corpus.Qualification/bin/Release/net10.0/Zafiro.Nes.Corpus.Qualification.dll \
   --root <local-corpus-directory> \
-  --server src/Nes.Debug.Mcp/bin/Release/net10.0/Nes.Mcp.dll \
+  --server src/Zafiro.Nes.Debug.Mcp/bin/Release/net10.0/Zafiro.Nes.Debug.Mcp.dll \
   --expected-total <count> \
   --expect-mapper <header-mapper>=<count> \
   [--expect-mapper <header-mapper>=<count> ...]

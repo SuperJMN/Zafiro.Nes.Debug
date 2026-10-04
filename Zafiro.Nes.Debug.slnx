@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Zafiro.Nes.Debug.Core/Zafiro.Nes.Debug.Core.csproj" />
+    <Project Path="src/Zafiro.Nes.Debug.Emulator/Zafiro.Nes.Debug.Emulator.csproj" />
+    <Project Path="src/Zafiro.Nes.Debug.Mcp/Zafiro.Nes.Debug.Mcp.csproj" />
+    <Project Path="src/Zafiro.Nes.Debug.Symbols/Zafiro.Nes.Debug.Symbols.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Zafiro.Nes.Debug.Tests/Zafiro.Nes.Debug.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/Zafiro.Nes.Corpus.Qualification/Zafiro.Nes.Corpus.Qualification.csproj" />
+  </Folder>
+</Solution>

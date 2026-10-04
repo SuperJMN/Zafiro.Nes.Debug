@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zafiro.Nes.Debug.Core\Zafiro.Nes.Debug.Core.csproj" />
+    <ProjectReference Include="..\Zafiro.Nes.Debug.Emulator\Zafiro.Nes.Debug.Emulator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="ModelContextProtocol" Version="1.4.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Zafiro.Nes.Debug.Mcp</AssemblyName>
+    <RootNamespace>Zafiro.Nes.Debug.Mcp</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>zafiro-nes-debug-mcp</ToolCommandName>
+    <PackageId>Zafiro.Nes.Debug.Mcp</PackageId>
+    <Title>Zafiro.Nes.Debug.Mcp</Title>
+    <Description>AprNes-powered cross-platform MCP server for inspecting and controlling NES iNES ROMs. Exposes CPU stepping, breakpoints, memory, controller input, frame execution and inline screen captures over the Model Context Protocol.</Description>
+    <Authors>SuperJMN</Authors>
+    <Company>José Manuel Nieto (@SuperJMN)</Company>
+    <Product>Zafiro.Nes.Debug.Mcp</Product>
+    <PackageTags>mcp;model-context-protocol;nes;debugger;emulator;ai</PackageTags>
+    <PackageLicenseExpression>MIT AND WTFPL AND GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/SuperJMN/Zafiro.Nes.Debug</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SuperJMN/Zafiro.Nes.Debug</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\..\THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\Zafiro.Nes.Debug.Emulator\AprNes\APRNES-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\Zafiro.Nes.Debug.Emulator\AprNes\TRICNES-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\Zafiro.Nes.Debug.Emulator\AprNes\MESEN2-GPL-3.0-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\Zafiro.Nes.Debug.Emulator\AprNes\EMU2413-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
+
+</Project>

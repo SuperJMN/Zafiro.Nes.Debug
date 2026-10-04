@@ -1,10 +1,10 @@
-# Nes.Mcp
+# Zafiro.Nes.Debug
 
-`Nes.Mcp` is a cross-platform .NET MCP server for inspecting and controlling NES ROMs in iNES format.
+`Zafiro.Nes.Debug.Mcp` is a cross-platform .NET MCP server for inspecting and controlling NES ROMs in iNES format.
 
 The MCP server exposes CPU stepping, frame execution, deterministic controller input timelines, breakpoints/watchpoints, CPU memory reads/writes, authoritative PPU/OAM inspection, continuous PPU-register tracing, correlated screen/RAM/PPU observation, symbols, lightweight disassembly, savestates, screen-region probes, and PNG screen capture.
 
-`Nes.Mcp` directly uses the vendored [AprNes](https://github.com/erspicu/AprNes) backend for every supported ROM. AprNes implements the complete MCP debug workflow, including continuous PPU-register tracing and correlated execution observation for mappers 0-3 and the broader supported mapper set.
+`Zafiro.Nes.Debug.Mcp` directly uses the vendored [AprNes](https://github.com/erspicu/AprNes) backend for every supported ROM. AprNes implements the complete MCP debug workflow, including continuous PPU-register tracing and correlated execution observation for mappers 0-3 and the broader supported mapper set.
 
 ## Build
 
@@ -15,7 +15,7 @@ Requirements:
 From the repo root:
 
 ```bash
-dotnet build nes-debug-mcp.slnx
+dotnet build Zafiro.Nes.Debug.slnx
 ```
 
 ## Run
@@ -23,7 +23,7 @@ dotnet build nes-debug-mcp.slnx
 From the repo root:
 
 ```bash
-dotnet run --project src/Nes.Debug.Mcp/Nes.Debug.Mcp.csproj
+dotnet run --project src/Zafiro.Nes.Debug.Mcp/Zafiro.Nes.Debug.Mcp.csproj
 ```
 
 ## Connect An MCP Client
@@ -39,7 +39,7 @@ Use stdio transport. For development against this local checkout:
         "run",
         "--no-restore",
         "--project",
-        "/absolute/path/to/NesMcp/src/Nes.Debug.Mcp/Nes.Debug.Mcp.csproj"
+        "/absolute/path/to/Zafiro.Nes.Debug/src/Zafiro.Nes.Debug.Mcp/Zafiro.Nes.Debug.Mcp.csproj"
       ],
       "startup_timeout_sec": 60,
       "tool_timeout_sec": 60
@@ -57,7 +57,7 @@ Once the tool is packed and published, the path-independent form should be:
   "mcpServers": {
     "nes_debug": {
       "command": "dnx",
-      "args": ["Nes.Mcp", "--yes"]
+      "args": ["Zafiro.Nes.Debug.Mcp", "--yes"]
     }
   }
 }
@@ -123,7 +123,7 @@ See [docs/mcp-tools.md](docs/mcp-tools.md) for schemas and examples.
 ## Validate
 
 ```bash
-dotnet test nes-debug-mcp.slnx -m:1
+dotnet test Zafiro.Nes.Debug.slnx -m:1
 git diff --check
 ```
 
@@ -133,7 +133,7 @@ See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution, license no
 
 The main local license files are:
 
-- [src/Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt](src/Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt)
-- [src/Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt](src/Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt)
-- [src/Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt](src/Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt)
-- [src/Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt](src/Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt)
+- [src/Zafiro.Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt](src/Zafiro.Nes.Debug.Emulator/AprNes/APRNES-LICENSE.txt)
+- [src/Zafiro.Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt](src/Zafiro.Nes.Debug.Emulator/AprNes/TRICNES-LICENSE.txt)
+- [src/Zafiro.Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt](src/Zafiro.Nes.Debug.Emulator/AprNes/MESEN2-GPL-3.0-LICENSE.txt)
+- [src/Zafiro.Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt](src/Zafiro.Nes.Debug.Emulator/AprNes/EMU2413-LICENSE.txt)

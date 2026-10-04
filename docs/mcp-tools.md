@@ -3,7 +3,7 @@
 All CPU addresses are 16-bit NES CPU addresses. Address strings accept `0xC000`, `$C000`, or `C000`.
 PPU tile dump tools use PPU addresses.
 Execution and state results include a `timeline` object with cumulative `frames`, CPU `cycles`, and `instructions` since the last ROM load, reset, or loaded savestate.
-`get_state` also reports `serverVersion`, the active `backend`, `backendVersion`, and AprNes `debugCycleLimit`. Because AprNes is vendored and locally integrated, `backendVersion` identifies the `Nes.Debug.Emulator` build that contains that source rather than an independent upstream package.
+`get_state` also reports `serverVersion`, the active `backend`, `backendVersion`, and AprNes `debugCycleLimit`. Because AprNes is vendored and locally integrated, `backendVersion` identifies the `Zafiro.Nes.Debug.Emulator` build that contains that source rather than an independent upstream package.
 When a tool that has begun CPU or frame execution fails, its error response also contains a bounded `diagnostics` object with `backend`, `backendVersion`, `serverVersion`, and the AprNes `debugCycleLimit`. Input-validation errors raised before execution do not invent backend context.
 
 ## Execution
@@ -181,7 +181,7 @@ Operators are `==`, `!=`, `<`, `<=`, `>`, and `>=`.
 4. Call `load_state`, replay `frameOffset - 1` complete frames, and use `trace_ppu_register_writes` for the focal frame.
 5. Reload once more and stop at the relevant PC or RAM condition when instruction-level inspection is needed. Use `read_ppu_state`, `read_screen_region` with `palette_indices_raw`, `dump_nametables`, `dump_oam`, and `dump_tileset` to collect the exact state.
 
-Savestates make repeated observations deterministic within the same backend and build. These tools and the AprNes integration tests validate NesMcp's instrumentation and contracts; they do not replace a final smoke test in FCEUmm or another independent emulator when emulator-accuracy parity matters.
+Savestates make repeated observations deterministic within the same backend and build. These tools and the AprNes integration tests validate Zafiro.Nes.Debug's instrumentation and contracts; they do not replace a final smoke test in FCEUmm or another independent emulator when emulator-accuracy parity matters.
 
 ## Backend Support
 
