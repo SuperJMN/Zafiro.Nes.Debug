@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-`Zafiro.Nes.Debug.Mcp` includes vendored emulator code and emulator reference work from other projects. Keep this notice with source and binary distributions.
+The `Zafiro.Nes.Debug.Emulator` and `Zafiro.Nes.Debug.Mcp` packages include vendored emulator code and emulator reference work from other projects. Keep this notice with source and binary distributions.
 
 ## Vendored Emulator Cores
 
