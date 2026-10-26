@@ -12,7 +12,18 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>$(NoWarn);CS0169;CS0649;CS0618;CS8509;CS0414;CS0067;CS8632;CS8618;CS8600;CS8602;CS8603;CS8604;CS8625</NoWarn>
-    <IsPackable>false</IsPackable>
+    <IsPackable>true</IsPackable>
+    <Description>Managed NES / Famicom emulator (vendored AprNes core) with a debug session: stepping, breakpoints, memory and register observers, savestates. No native dependencies.</Description>
+    <PackageTags>nes;famicom;emulator;debugger</PackageTags>
+    <PackageLicenseExpression>MIT AND WTFPL AND GPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="" Visible="false" />
+    <None Include="AprNes\APRNES-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="AprNes\TRICNES-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="AprNes\MESEN2-GPL-3.0-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+    <None Include="AprNes\EMU2413-LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
 
 </Project>

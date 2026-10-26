@@ -127,6 +127,20 @@ dotnet test Zafiro.Nes.Debug.slnx -m:1
 git diff --check
 ```
 
+## Libraries
+
+Besides the MCP tool, the libraries it is built on are published to NuGet for
+programs that drive the emulator directly:
+
+| Package | Contents |
+|---------|----------|
+| `Zafiro.Nes.Debug.Emulator` | the managed emulator (vendored AprNes) and its debug session |
+| `Zafiro.Nes.Debug.Core` | debug session contracts and models |
+| `Zafiro.Nes.Debug.Symbols` | symbol files |
+
+`Zafiro.Nes.Debug.Emulator` carries the AprNes licenses (MIT AND WTFPL AND
+GPL-3.0-or-later); see the third-party notices.
+
 ## Third-Party Code
 
 See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution, license notes, and acknowledgements for vendored emulator code and credited emulator reference work.
